@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        .line-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #b5b2b2;
+  margin: 0 10px;
+}
+
+.text_line{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+        /* CSS cho phần danh mục bên trái */
+        .menu-categories {
+            float: left;
+            width: 20%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height: 200vh;
+            /* Đảm bảo danh mục chiếm cả chiều cao trang */
+        }
+
+        .menu-categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-categories ul li {
+            margin-bottom: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 5px;
+        }
+
+        .menu-categories ul li:hover {
+            background-color: #ccc;
+            transform: translateX(5px);
+        }
+
+        /* CSS cho phần sản phẩm bên phải */
+        .menu-items {
+            float: right;
+            width: 75%;
+            padding: 20px;
+            height: 150vh;
+            /* Đảm bảo phần sản phẩm chiếm cùng chiều cao với danh mục */
+            box-sizing: border-box;
+            /* Để tránh việc tính toán kích thước bị sai lệch */
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* CSS cho sản phẩm */
+        .menu-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            /* Thêm hiệu ứng box shadow */
+        }
+
+        .menu-item img {
+            border-radius: 5px;
+            max-width: 100px;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h4 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* CSS Flexbox để hiển thị sản phẩm hàng ngang */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            position: relative;
+            overflow: hidden;
+            width: 20%;
+            /* Để chia sản phẩm thành 2 cột */
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
+            /* Phóng to ảnh khi hover */
+        }
+
+        /* CSS cho nút đặt hàng */
+        .order-button {
+            background-color: white;
+            color: #3b7d3d;
+            border: 1px solid #3b7d3d;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            color: white;
+            background-color: #3b7d3d;
+        }
+
+        /* CSS cho nút quay về trang chủ */
+        .back-button {
+            background-color: white;
+            color: #3b7d3d;
+            border: 1px solid #3b7d3d;
+            
+            padding: 8px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            /* transition: background-color 0.3s; */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            width: 120px;
+            text-decoration: none;
+            /* Loại bỏ gạch chân */
+        }
+
+        .back-button:hover {
+            color: white;
+            background-color: #3b7d3d;
+            border: 1px solid #3b7d3d;
+        }
+
+        .back-icon {
+            margin-right: 5px;
+        }
+
+        .back-text {
+            font-size: 16px;
+            /* Kích thước chữ */
+            font-weight: bold;
+            /* Độ đậm của chữ */
+            text-transform: uppercase;
+            /* Chuyển thành chữ hoa */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-categories">
+        <h3>Danh mục</h3>
+        <ul>
+            <li>TRÀ SỮA Ô LONG</li>
+            <li>TRÀ HOA QUẢ</li>
+            <li>CÀ PHÊ</li>
+        </ul>
+    </div>
+    <div class="menu-items">
+        <!-- Nút quay về trang chủ -->
+        <a href="/index.html" class="back-button">
+            <i class="fas fa-arrow-left back-icon"></i>
+            <span class="back-text">Trang chủ</span>
+        </a>
+        <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="text_line">TRÀ SỮA Ô LONG</div>
+            <div class="line"></div>
+        </div>
+        
+    <div class="product-container">
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 1</h4>
+                        <p>Giá:10.000đ</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 2</h4>
+                        <p>Giá: $12</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 3</h4>
+                        <p>Giá: $8</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 4</h4>
+                        <p>Giá: $15</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="text_line">TRÀ HOA QUẢ</div>
+            <div class="line"></div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 1</h4>
+                        <p>Giá: $10</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 2</h4>
+                        <p>Giá: $12</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 3</h4>
+                        <p>Giá:20.000đ</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 4</h4>
+                        <p>Giá: $15</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ///////// -->
+        <div class="line-wrapper">
+            <div class="line"></div>
+            <div class="text_line">CÀ PHÊ</div>
+            <div class="line"></div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 1</h4>
+                        <p>Giá: $10</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 2</h4>
+                        <p>Giá: $12</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 3</h4>
+                        <p>Giá:20.000đ</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="menu-item">
+                    <img src="/images/sp1.jpg" alt="Bún bò">
+                    <div class="menu-item-info">
+                        <h4>Tên sản phẩm 4</h4>
+                        <p>Giá: $15</p>
+                        <button class="order-button">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

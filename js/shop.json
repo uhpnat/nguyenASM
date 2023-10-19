@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ô Long Chôm Chôm",
+      "img": "sp1.jpg",
+      "price": 20000
+    },
+    {
+      "id": 2,
+      "name": "Ô Long Đỏ Đamb’ri",
+      "img": "sp2.jpg",
+      "price": 40000
+    },
+    {
+      "id": 3,
+      "name": "Ô long B’lao sữa",
+      "img": "sp3.png",
+      "price": 25000
+    },
+    {
+      "id": 4,
+      "name": "Ô Long Trứng Nướng",
+      "img": "sp4.png",
+      "price": 15000
+    },
+    {
+      "id": 5,
+      "name": "Ô Long Nhài Sữa",
+      "img": "sp5.png",
+      "price": 30000
+    },
+    {
+      "id": 6,
+      "name": "Ô Long Chanh Vàng",
+      "img": "sp6.png",
+      "price": 40000
+    },
+    {
+      "id": 7,
+      "name": "Ô Long Dâu Đà Lạt",
+      "img": "sp7.jpg",
+      "price":15000
+    },
+    {
+      "id": 8,
+      "name": "Ô Long Mãng Cầu",
+      "img": "sp8.jpg",
+      "price": 50000
+    }
+  ]
+}

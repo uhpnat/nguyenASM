@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+   <div class="hero">
+    <div class="form-box">
+<button type="button" class="tongle-btn">Log In</button>
+<button type="button" class="tongle-btn">Register</button>
+    </div>
+   </div>
+
+
+
+
+
+</body>
+
+<div class="product" id="product1" onclick="loadProductDetail('product1')">
+    <img src="images/sp1.jpg" alt="Sản phẩm 1">
+    <h5>Ô Long Chôm Chôm</h5>
+    <p>Giá: <span>20.000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product2">
+    <img src="images/sp2.jpg" alt="Sản phẩm 2">
+    <h5>Ô Long Đỏ Đamb’ri</h5>
+    <p>Giá: <span>30000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product3">
+    <img src="images/sp3.png" alt="Sản phẩm 3">
+    <h5>Ô long B’lao sữa</h5>
+    <p>Giá:45.0000</p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product4">
+    <img src="images/sp4.png" alt="Sản phẩm 4">
+    <h5>Ô Long Trứng Nướng</h5>
+    <p>Giá: <span>25.0000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+
+<!-- Hàng 2 -->
+<div class="product" id="product5">
+    <img src="images/sp5.png" alt="Sản phẩm 5">
+    <h5>Ô Long Nhài Sữa</h5>
+    <p>Giá: <span>35.0000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product6">
+    <img src="images/sp6.png" alt="Sản phẩm 6">
+    <h5>Ô Long Chanh Vàng</h5>
+    <p>Giá: <span>45.0000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product7">
+    <img src="images/sp7.jpg" alt="Sản phẩm 7">
+    <h5>Ô Long Dâu Đà Lạt</h5>
+    <p>Giá: <span>50.0000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+<div class="product" id="product8">
+    <img src="images/sp8.jpg" alt="Sản phẩm 8">
+    <h5>Ô Long Mãng Cầu</h5>
+    <p>Giá: <span>35.000</span> <sup>đ</sup></p>
+    <button class="bt">Đặt hàng</button>
+</div>
+
+
+
+
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Lấy giá trị người dùng đã nhập
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Kiểm tra thông tin đăng nhập (thay thế bằng cách kiểm tra cơ sở dữ liệu thực tế)
+    if (username === "nguyentran123" && password === "051203") {
+        window.location.href = "index.html";
+    } else {
+        document.getElementById("message").innerHTML = "Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại.";
+    }
+});
+
+</script>
+</html>

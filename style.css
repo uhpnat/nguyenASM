@@ -1,0 +1,568 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Nunito+Sans:ital,wght@0,300;0,400;1,200;1,300;1,400;1,600&family=Nunito:ital,wght@0,200;0,300;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;1,200&family=Roboto:wght@100;300;400;500;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap');
+
+
+/* Reset CSS để đảm bảo giao diện đẹp */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+/* Phần header */
+header {
+  z-index: 1;
+  background-color: #623619;
+  color: #b3b3b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  /* Để phần Header cố định ở đầu trang */
+  width: 100%;
+
+  /* Đảm bảo rằng Header chiếm toàn bộ chiều rộng của trình duyệt */
+  top: 0;
+  /* Để Header nằm trên cùng của trang */
+}
+
+header:hover {
+  color: white;
+}
+
+/* Phần số điện thoại và email */
+.contact-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.contact-info i {
+  color: #fff;
+  margin-right: 5px;
+  transition: color 0.3s;
+  margin: 0px 10px;
+  cursor: pointer;
+  /* Thêm hiệu ứng màu khi hover */
+}
+
+.contact-info i:hover {
+  color: black;
+  /* Màu vàng khi hover */
+}
+
+/* Phần tìm kiếm */
+.input-search {
+  width: 400px;
+  margin-right: 210px;
+  display: flex;
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+}
+
+.input-search input {
+  margin-top: 10px;
+  padding: 10px;
+  margin-right: 5px;
+  /* Khoảng cách giữa input và button */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-search button {
+  padding: 10px 20px;
+  background-color: #646464;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Phần đăng nhập */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #828282;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #828282;
+
+}
+
+tr th {
+  padding: 10px 15px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+
+.cart table thead tr th:first-child {
+  text-align: left;
+}
+
+.cart table tr td {
+  border-bottom: 1px solid #828282;
+  padding: 12px 0;
+}
+
+.cart table thead tr th:last-child {
+  text-align: right;
+}
+
+.cart table thead tr td:last-child {
+  text-align: right;
+}
+
+.total {
+  margin-top: 10px;
+  text-align: right;
+  padding-right: -30px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Phần Navbar */
+/* Logo trong Navbar */
+.navbar-logo img {
+  margin-left: auto;
+}
+
+/* CSS cho danh sách sản phẩm trong giỏ hàng */
+.cart-items {
+  padding: 10px 0;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.cart h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cart th {
+  background-color: #008800;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart img {
+  margin: 10px 20px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-item-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cart-price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.cart-quantity-input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* CSS cho tổng cộng */
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cart-total-title {
+  margin-right: 20px;
+}
+
+.cart p span {
+  color: red;
+}
+
+/* giohang */
+
+.cart {
+  /*  z-index: 1; nằm đè trang  */
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 400px;
+  right: 0;
+  top: 0;
+  background-color: #fbf8f4;
+  padding: 12px 20px;
+  /*   overflow-y: scroll; tự đổ hàng khi nhiều sp*/
+  overflow-y: scroll;
+  right: -100%;
+  transition: all 0.3s ease;
+
+}
+
+.cart .thanhtoan {
+  width: 180px;
+  margin-top: 18px;
+  margin-left: 90px;
+  height: 30px;
+  padding: 0 20px;
+  /* margin-left: 10px; */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+}
+
+.cart .thanhtoan:hover {
+  background-color: #45a049;
+}
+
+.cart i {
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* CSS cho nút đóng và tiến hành thanh toán */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #aaaaaa;
+  padding-top: 20px;
+}
+
+
+/*---------------------CSS ĐẶT HÀNG */
+button {
+  background-color: white;
+  /* Màu nền của nút */
+  color: #3b7d3d;
+  /* Màu chữ trên nút */
+  border: 1px solid #3b7d3d;
+  /* Loại bỏ đường viền */
+  padding: 10px 20px;
+  /* Kích thước nút */
+  border-radius: 5px;
+  /* Bo tròn góc */
+  cursor: pointer;
+  /* Biểu tượng con trỏ khi di chuột vào nút */
+  transition: background-color 0.3s ease;
+  /* Hiệu ứng chuyển đổi màu nền khi hover */
+}
+
+button:hover {
+  color: white;
+  background-color: #3b7d3d;
+  /* Màu nền khi di chuột vào nút */
+}
+
+/*---------------------CSS ĐẶT HÀNG */
+/* Điều chỉnh kích thước logo */
+.navbar {
+  padding: 10px 20px;
+  margin-top: 75px;
+  background-color: #b89d8b;
+  display: flex;
+  justify-content: center;
+  /* Căn giữa các liên kết trong Navbar */
+  align-items: center;
+  /* Khoảng cách giữa Header và Navbar */
+  position: relative;
+  /* Để Navbar nằm trên cùng */
+  z-index: 1;
+  /* Để Navbar nằm trên cùng */
+}
+
+.navbar a {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #623619;
+  text-decoration: none;
+  margin: 0 10px;
+  /* Khoảng cách giữa các liên kết */
+  padding: 5px 10px;
+  /* Kích thước ô liên kết */
+  transition: color 0.3s;
+  /* Thêm hiệu ứng màu khi hover */
+}
+
+.navbar a:hover {
+  color: #623619;
+  /* Màu vàng khi hover */
+}
+
+.shopping-cart {
+  width: 60px;
+  font-size: 24px;
+  margin-left: 10px;
+  /* Khoảng cách giữa biểu tượng giỏ hàng và các liên kết */
+  cursor: pointer;
+  transition: color 0.3s;
+  /* Thêm hiệu ứng màu khi hover */
+}
+
+i.shopping-cart {
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px #fff dashed;
+  color: #623619;
+
+}
+
+
+
+/* Thêm CSS cho slideshow */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 0px;
+  /* Khoảng cách giữa Navbar và slideshow */
+}
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Thêm CSS cho các hình chữ nhật */
+.rectangles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.rectangle {
+  flex-basis: 30%;
+  /* Kích thước của mỗi hình chữ nhật */
+  background-color:#f8f1e5;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Thêm CSS cho biểu tượng */
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* CSS cho sản phẩm và lưới sản phẩm */
+/* --------------------products */
+.line-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #b5b2b2;
+  margin: 0 10px;
+}
+
+.text_line{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+  font-size: 18px;
+  /* Kích thước chữ */
+  color: #333;
+  /* Màu chữ */
+  margin: 0;
+  /* Loại bỏ khoảng cách ngoại vi (margin) */
+  padding: 5px 0;
+  /* Khoảng cách giữa tiêu đề và các phần khác */
+  text-align: center;
+  /* Căn giữa văn bản */
+}
+
+.products {
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  width: 22%;
+  /* Khoảng cách và margin để tạo khoảng cách giữa sản phẩm */
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  /* Đặt border cho sản phẩm */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Đặt shadow cho sản phẩm */
+  position: relative;
+  overflow: hidden;
+}
+
+.product img {
+  transition: transform 0.3s ease-in-out;
+  width: 70%;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product:hover img {
+  transform: scale(1.1);
+  /* Phóng to ảnh khi hover */
+}
+
+/* footer */
+/* CSS cho phần footer */
+.footer {
+  background-color: #623618;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* Tắt tự động chuyển xuống hàng */
+}
+
+.footer div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  background-color: #704225;
+  /* Màu nền */
+  color: white;
+  /* Màu chữ */
+  text-align: center;
+  padding: 10px;
+}
+
+.footer p {
+  margin: 0;
+  /* Loại bỏ margin */
+  padding: 0;
+  /* Loại bỏ padding */
+  text-indent: 0;
+  /* Loại bỏ thụt vào hàng đầu tiên */
+}
+
+/*  */
+/* Định dạng các trường và label */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Định dạng nút thanh toán */
+.pay-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+.pay-button:hover {
+  background-color: #45a049;
+}
+
+/* Định dạng phần tử thông tin thanh toán */
+.payment-info {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Định dạng giỏ hàng và nút đóng */
+.cart {
+  /* Thêm kiểu của bạn cho phần giỏ hàng */
+}
+
+.cart .fa-times {
+  /* Thêm kiểu của bạn cho nút đóng */
+}
+
+
+
+
+/* footer */

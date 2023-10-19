@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Liên kết đến Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- lick css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="contact-info">
+            <i class="fas fa-phone"></i> <!-- Sử dụng "fas" thay cho "fa" để sử dụng Font Awesome 6 -->
+            <span>Số điện thoại: 038-664-2744</span>
+            <i class="fas fa-envelope"></i> <!-- Sử dụng "fas" thay cho "fa" để sử dụng Font Awesome 6 -->
+            <span>Email:trancaonguyen.1411@gmail.com</span>
+        </div>
+        <div class="input-search">
+            <input type="text" placeholder="Tìm kiếm...">
+
+            <button type="button" class="search">Search</button>
+        </div>
+
+
+    </header>
+    <!-- Phần Navbar -->
+    </div>
+    <div class="navbar">
+        <a href="#">Trang chủ</a>
+        <a href="/thucdon.html">Thực Đơn</a>
+        <a href="#">Liên hệ</a>
+        <a href="#">Giới thiệu</a>
+        <!-- carticon -->
+        <div class="cart-icon">
+            <p> <i class="fas fa-shopping-cart shopping-cart" aria-hidden="true"></i> <span id="cart-qty"></span></p>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- </div> -->
+    <!-- Phần Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slideshow-img" src="/images/hero-1.jpg" alt="Hình ảnh 1">
+        </div>
+        <div class="mySlides">
+            <img class="slideshow-img" src="/images/hero-2.jpg" alt="Hình ảnh 2">
+        </div>
+        <div class="mySlides">
+            <img class="slideshow-img" src="/images/hero-3.jpg" alt="Hình ảnh 3">
+        </div>
+
+    </div>
+    <!-- Các hình chữ nhật và biểu tượng -->
+    <div class="rectangles">
+        <div class="rectangle">
+            <i class="fas fa-car icon"></i>
+            <p>Miễn phí giao hàng đơn hàng từ 200K</p>
+        </div>
+        <div class="rectangle">
+            <i class="fas fa-sync-alt icon"></i>
+            <p>Đảm bảo ưu đãi</p> <br>
+            <p>Mua càng nhiều , ữu đãi càng lớn</p>
+        </div>
+        <div class="rectangle">
+            <i class="fas fa-heart icon"></i>
+            <p>Uy tín đảm bảo</p>
+        </div>
+    </div>
+    <!-- section -->
+    <!-- Phần sản phẩm -->
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text_line">Tất cả sản phẩm</div>
+        <div class="line"></div>
+    </div>
+    <!--  -->
+    <div class="products" id="products">
+        <!-- Hàng 1 -->
+
+    </div>
+    <!-- SHOPPING-CART -->
+    <div class="cart">
+        <i class="fas fa-times"></i>
+        <h2>Giỏ hàng</h2>
+        <form action="" class="cart-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Thao tác</th> <!-- Thêm cột cho nút xóa -->
+                    </tr>
+
+                </thead>
+                <tbody id="renderAddCart">
+
+
+                    <!-- Thêm các hàng cho các sản phẩm khác nếu cần -->
+                </tbody>
+            </table>
+            <div class="total" id="total">
+                <p style="font-weight: bold;" id="renderAddCart">Tổng tiền:<span>0</span><sup></sup></p>
+            </div>
+            <a href="#"></a>
+            <button type="button" class="thanhtoan">Tiến hành thanh toán</button>
+            <!-- thanh toán-->
+
+        </form>
+        <!-- Mã HTML cho phần thông tin thanh toán -->
+        <div class="payment-info" style="display: none;">
+            <h2 style="text-align: center; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Thông tin
+                khách hàng</h2>
+            <form>
+                <!-- Trường dữ liệu cho họ và tên -->
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <br>
+                <!-- Trường dữ liệu cho email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <!-- Trường dữ liệu cho số điện thoại -->
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <br>
+                <!-- Trường dữ liệu cho địa chỉ -->
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <!-- Trường dữ liệu cho tùy chọn thanh toán -->
+                <label for="payment">Hình thức thanh toán:</label>
+                <select id="payment" name="payment" required>
+                    <option value="tienmat">Tiền mặt</option>
+                    <option value="chuyenkhoan">Chuyển khoản</option>
+                </select>
+                <br>
+                <button type="button" class="pay-button">Thanh toán</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div>
+                <h3>Địa chỉ</h3>
+                <p>Địa chỉ: 92 Thân Nhân Trung </p>
+                <p>Quận Tân Bình,Tp Hồ Chí Minh</p>
+            </div>
+            <div>
+                <h3>Về chúng tôi</h3>
+                <p>1 quán ăn ngon đem đến nhiều sản phẩm <br> chất lượng với giả cả phải chăng</p>
+            </div>
+            <div>
+                <h3>Chính sách</h3>
+                <p> Chính sách đổi trả và khiếu nại <br> nhượng quyền thương hiệu</p>
+            </div>
+            <div>
+                <h3>Bản đồ</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.080942559572!2d106.6402367733105!3d10.805112558667462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294510da6263%3A0x207dd93cfa92ac87!2zOTIgVGjDom4gTmjDom4gVHJ1bmcsIFBoxrDhu51uZyAxMywgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1696785270772!5m2!1svi!2s"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            @2023 Bản quyền này thuộc về caonguyen
+        </div>
+
+    </footer>
+
+
+
+    <script src="/js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+
+</html>

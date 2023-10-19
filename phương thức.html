@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+</body>
+<script>
+    // Lấy nút thanh toán
+const payButton = document.querySelector(".thanhtoan");
+
+// Lấy phần tử hiển thị thông tin thanh toán
+const paymentInfo = document.querySelector(".payment-info");
+
+// Gắn sự kiện click cho nút thanh toán
+payButton.
+pay
+addEventListener("click", function () {
+    // Hiển thị hoặc ẩn phần tử thông tin thanh toán tùy thuộc vào trạng thái hiện tại
+    if (paymentInfo.style.display === "none" || paymentInfo.style.display === "") {
+        paymentInfo.style.display = "block"; // Hiển thị phần tử
+    } else {
+        paymentInfo.
+        paymentInfo
+style.display = "none"; // Ẩn phần tử
+    }
+});
+
+// Xử lý sự kiện thanh toán (điều này cần được cài đặt dựa trên hệ thống thanh toán của bạn)
+const payButtonInsideInfo = paymentInfo.querySelector(".pay-button");
+payButtonInsideInfo.addEventListener("click", function () {
+    // Đây là nơi bạn có thể thêm xử lý thanh toán thực tế
+    // Ví dụ: gửi thông tin thanh toán đến máy chủ hoặc cổng thanh toán của bạn
+    // Sau khi thanh toán thành công, bạn có thể cập nhật giao diện người dùng hoặc thực hiện các hành động khác.
+    alert("Thanh toán thành công!");
+});
+</script>
+</html>
